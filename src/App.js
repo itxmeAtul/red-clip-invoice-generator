@@ -59,9 +59,10 @@ const App = () => {
     // console.log(data, "data");
     let temptotalCost = 0;
     temptotalCost = tableData.reduce(
-      (n, { amt }) => (n + amt ? parseFloat(amt) : 0),
+      (acc, curr) => acc + parseFloat(curr.amt ? curr.amt : 0),
       0
     );
+
     setTotalCost(temptotalCost);
   }, [refresh]);
 
