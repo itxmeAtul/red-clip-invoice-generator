@@ -56,7 +56,7 @@ const App = () => {
   }
 
   React.useEffect(() => {
-    console.log(data, "data");
+    // console.log(data, "data");
     let temptotalCost = 0;
     temptotalCost = tableData.reduce(
       (n, { amt }) => (n + amt ? parseFloat(amt) : 0),
@@ -84,7 +84,7 @@ const App = () => {
         { responseType: "blob" }
       )
       .then((res) => {
-        console.log(res, "res");
+        // console.log(res, "res");
         // return;
         const file = new Blob([res.data], { type: "application/pdf" });
         const fileURL = URL.createObjectURL(file);
